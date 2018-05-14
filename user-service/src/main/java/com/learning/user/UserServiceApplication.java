@@ -1,8 +1,6 @@
 package com.learning.user;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,9 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.learning.api.convertor.UserConvertor;
-import com.learning.api.entity.Role;
 import com.learning.api.entity.User;
-import com.learning.api.entity.UserRole;
 import com.learning.rest.model.RestUser;
 import com.learning.rest.service.UserService;
 
