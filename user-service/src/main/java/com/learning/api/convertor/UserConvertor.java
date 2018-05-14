@@ -1,8 +1,11 @@
 package com.learning.api.convertor;
 
+import org.springframework.stereotype.Component;
+
 import com.learning.api.entity.User;
 import com.learning.rest.model.RestUser;
 
+@Component
 public class UserConvertor {
 
 	public RestUser convertToRest(User user) {

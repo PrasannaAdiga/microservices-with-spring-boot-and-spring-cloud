@@ -10,7 +10,13 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class UserRole {
-	
+
+	public UserRole(User user, Role role) {
+		super();
+		this.user = user;
+		this.role = role;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long userRoleId;

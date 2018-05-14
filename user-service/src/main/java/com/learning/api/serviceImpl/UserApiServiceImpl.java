@@ -17,5 +17,10 @@ public class UserApiServiceImpl implements UserApiService {
 	public User createUser(User user) {
 		return userRepository.save(user);
 	}
+
+	@Override
+	public User getUserByName(String userName) {
+		return userRepository.getUserByFirstName(userName);
+	}
 	
 }

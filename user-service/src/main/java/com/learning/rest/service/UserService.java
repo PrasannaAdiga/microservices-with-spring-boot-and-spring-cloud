@@ -5,5 +5,6 @@ import com.learning.rest.model.RestUser;
 
 public interface UserService {
 	
+	public RestUser getUserByName(String userName);
 	public User createUser(RestUser user);
 }
