@@ -45,13 +45,6 @@ public class UserServiceApplication implements CommandLineRunner {
 		user.setEmail("gpadiga@gmail.com");
 		user.setJoinDate(new Date());
 		
-		Set<UserRole> userRoles = new HashSet<>();
-		
-		Role role1 = new Role();
-		role1.setRoleId(1);
-		role1.setRoleName("ROLE_USER");
-		userRoles.add(new UserRole(user, role1));
-		
 		RestUser restUser = userConvertor.convertToRest(user);
 		userService.createUser(restUser);
 	}

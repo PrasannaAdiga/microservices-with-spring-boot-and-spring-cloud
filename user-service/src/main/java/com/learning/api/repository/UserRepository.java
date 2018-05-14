@@ -8,5 +8,5 @@ import com.learning.api.entity.User;
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
 	
-	public User getUserByFirstName(String userName);
+	public User findByFirstName(String userName);
 }

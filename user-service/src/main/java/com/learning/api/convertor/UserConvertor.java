@@ -1,8 +1,13 @@
 package com.learning.api.convertor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.stereotype.Component;
 
+import com.learning.api.entity.Role;
 import com.learning.api.entity.User;
+import com.learning.api.entity.UserRole;
 import com.learning.rest.model.RestUser;
 
 @Component
@@ -29,6 +34,15 @@ public class UserConvertor {
 		user.setUsername(restUser.getUsername());
 		user.setJoinDate(restUser.getJoinDate());
 		user.setPassword(restUser.getPassword());
+		
+		Role defaultUserRole = new Role();
+		defaultUserRole.setRoleId(1);
+		defaultUserRole.setRoleName("ROLE_USER");
+		
+		Set<UserRole> userRoles = new HashSet<>();
+		userRoles.add(new UserRole(user, defaultUserRole));
+		
+		user.setUserRoles(userRoles);
 		
 		return user;
 		
