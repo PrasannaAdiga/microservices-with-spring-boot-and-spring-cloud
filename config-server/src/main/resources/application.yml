@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/PrasannaAdiga/Learn-Microservices-with-spring-boot-and-spring-cloud/config-repo
+          search-paths:
+          - userservice
