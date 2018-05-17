@@ -42,7 +42,7 @@ public class UserConvertor {
 		Set<UserRole> userRoles = new HashSet<>();
 		userRoles.add(new UserRole(user, defaultUserRole));
 		
-		user.setUserRoles(userRoles);
+		//user.setUserRoles(userRoles);
 		
 		return user;
 		

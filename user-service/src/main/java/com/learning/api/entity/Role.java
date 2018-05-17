@@ -19,7 +19,6 @@ public class Role {
 	private String roleName;
 	
 	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonIgnore
 	private Set<UserRole> userRoles = new HashSet<>();
 		
 	public Role() {}

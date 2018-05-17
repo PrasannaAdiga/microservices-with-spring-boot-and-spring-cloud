@@ -22,10 +22,10 @@ import com.learning.rest.service.UserService;
 public class UserServiceApplication implements CommandLineRunner {
 
 	@Autowired
-	private UserService userService;
+	UserService userService;
 	
 	@Autowired
-	private UserConvertor userConvertor;
+    UserConvertor userConvertor;
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserServiceApplication.class, args);

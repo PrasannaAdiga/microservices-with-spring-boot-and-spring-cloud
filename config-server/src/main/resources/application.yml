@@ -6,6 +6,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/PrasannaAdiga/Learn-Microservices-with-spring-boot-and-spring-cloud/config-repo
+          uri: https://github.com/PrasannaAdiga/config-repo.git
           search-paths:
           - userservice
