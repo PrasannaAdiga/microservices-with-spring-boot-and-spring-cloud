@@ -10,7 +10,7 @@ public interface BookService {
 	public RestBook createBook(RestBook restBook);
 	public RestBook getBookById(UUID id);
 	public List<RestBook> getAllBooks();
-	public RestBook updateBookById(RestBook restBook);
+	public RestBook updateBook(RestBook restBook);
 	public void deleteBookById(UUID id);
 	
 }

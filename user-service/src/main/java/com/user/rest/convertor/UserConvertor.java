@@ -16,6 +16,7 @@ public class UserConvertor {
 	public RestUser convertToRest(User user) {
 		RestUser restUser = new RestUser();
 		
+		restUser.setId(user.getId());
 		restUser.setFirstName(user.getFirstName());
 		restUser.setLastName(user.getLastName());
 		restUser.setUsername(user.getUsername());
@@ -28,6 +29,7 @@ public class UserConvertor {
 	public User convertToEntity(RestUser restUser) {
 		User user = new User();
 		
+		user.setId(restUser.getId());
 		user.setFirstName(restUser.getFirstName());
 		user.setLastName(restUser.getLastName());
 		user.setEmail(restUser.getEmail());
@@ -37,12 +39,12 @@ public class UserConvertor {
 		
 		Role defaultUserRole = new Role();
 		defaultUserRole.setRoleId(1);
-		defaultUserRole.setRoleName("ROLE_USER");
+		defaultUserRole.setRoleName("ROLE_ADMIN");
 		
 		Set<UserRole> userRoles = new HashSet<>();
 		userRoles.add(new UserRole(user, defaultUserRole));
 		
-		//user.setUserRoles(userRoles);
+		user.setUserRoles(userRoles);
 		
 		return user;
 		

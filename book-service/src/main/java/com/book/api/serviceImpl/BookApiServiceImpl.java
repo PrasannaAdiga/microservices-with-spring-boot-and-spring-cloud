@@ -31,7 +31,7 @@ public class BookApiServiceImpl implements BookApiService {
 	}
 
 	@Override
-	public Book updateBookById(Book book) {
+	public Book updateBook(Book book) {
 		return bookRepository.save(book);
 	}
 

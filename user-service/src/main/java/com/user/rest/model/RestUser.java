@@ -1,15 +1,30 @@
 package com.user.rest.model;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class RestUser {
 	
+	private UUID id;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private Date joinDate;
 	private String username;
 	private String password;
+	
+	/**
+	 * @return the id
+	 */
+	public UUID getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(UUID id) {
+		this.id = id;
+	}
 	/**
 	 * @return the firstName
 	 */

@@ -9,7 +9,7 @@ public interface BookApiService {
 	public Book createBook(Book book);
 	public Book getBookById(UUID id);
 	public Iterable<Book> getAllBooks();
-	public Book updateBookById(Book book);
+	public Book updateBook(Book book);
 	public void deleteBookById(UUID id);
 	
 }

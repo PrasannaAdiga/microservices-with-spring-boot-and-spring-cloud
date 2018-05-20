@@ -1,5 +1,9 @@
 package com.user.rest.serviceImpl;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,15 +23,36 @@ public class UserServiceImpl implements UserService {
 	UserApiService userApiService;
 
 	@Override
-	public User createUser(RestUser restUser) {
-		User user = userConvertor.convertToEntity(restUser);
-		return userApiService.createUser(user);
+	public RestUser createUser(RestUser restUser) {
+		User user = userApiService.createUser(userConvertor.convertToEntity(restUser));
+		return userConvertor.convertToRest(user);
 	}
 
 	@Override
-	public RestUser getUserByName(String userName) {
-		User user = userApiService.getUserByName(userName);
+	public RestUser getUserById(UUID id) {
+		User user = userApiService.getUserById(id);
 		return userConvertor.convertToRest(user);
+	}
+
+	@Override
+	public List<RestUser> getAllUsers() {
+		List<RestUser> restUsers = new ArrayList<>();
+		Iterable<User> users = userApiService.getAllUsers();
+		users.forEach(user -> {
+			restUsers.add(userConvertor.convertToRest(user));
+		});
+		return restUsers;
+	}
+
+	@Override
+	public RestUser updateUser(RestUser restUser) {
+		User user = userApiService.updateUser(userConvertor.convertToEntity(restUser));
+		return userConvertor.convertToRest(user);
+	}
+
+	@Override
+	public void deleteUserById(UUID id) {
+		userApiService.deleteUserById(id);
 	}
 	
 }

@@ -36,8 +36,8 @@ public class BookController {
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.PUT)
-	public RestBook updateBookById(@RequestBody RestBook restBook) {
-		return bookService.updateBookById(restBook);
+	public RestBook updateBook(@RequestBody RestBook restBook) {
+		return bookService.updateBook(restBook);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

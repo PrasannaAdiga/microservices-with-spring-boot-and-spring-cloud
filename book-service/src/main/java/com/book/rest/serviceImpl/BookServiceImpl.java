@@ -45,8 +45,8 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public RestBook updateBookById(RestBook restBook) {
-		Book book = bookApiService.updateBookById(bookConvertor.convertToEntity(restBook));
+	public RestBook updateBook(RestBook restBook) {
+		Book book = bookApiService.updateBook(bookConvertor.convertToEntity(restBook));
 		return bookConvertor.convertToRest(book);
 	}
 
