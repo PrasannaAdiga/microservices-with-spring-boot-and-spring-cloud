@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: bookservice
+  profiles:
+    active:
+    - default
+server:
+  port: 9081
