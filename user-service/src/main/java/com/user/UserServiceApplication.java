@@ -1,4 +1,4 @@
-package com.learning.user;
+package com.user;
 
 import java.util.Date;
 
@@ -11,10 +11,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.learning.api.convertor.UserConvertor;
-import com.learning.api.entity.User;
-import com.learning.rest.model.RestUser;
-import com.learning.rest.service.UserService;
+import com.user.api.entity.User;
+import com.user.rest.convertor.UserConvertor;
+import com.user.rest.model.RestUser;
+import com.user.rest.service.UserService;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.learning.*")

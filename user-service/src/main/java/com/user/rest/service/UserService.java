@@ -1,7 +1,7 @@
-package com.learning.rest.service;
+package com.user.rest.service;
 
-import com.learning.api.entity.User;
-import com.learning.rest.model.RestUser;
+import com.user.api.entity.User;
+import com.user.rest.model.RestUser;
 
 public interface UserService {
 	

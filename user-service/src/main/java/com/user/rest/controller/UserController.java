@@ -1,4 +1,4 @@
-package com.learning.rest.controller;
+package com.user.rest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.learning.api.entity.User;
-import com.learning.rest.model.RestUser;
-import com.learning.rest.service.UserService;
+import com.user.api.entity.User;
+import com.user.rest.model.RestUser;
+import com.user.rest.service.UserService;
 
 @RestController
 @RequestMapping("/v1/users")

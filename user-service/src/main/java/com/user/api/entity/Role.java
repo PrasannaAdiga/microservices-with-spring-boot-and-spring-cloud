@@ -1,4 +1,4 @@
-package com.learning.api.entity;
+package com.user.api.entity;
 
 import java.util.HashSet;
 import java.util.Set;

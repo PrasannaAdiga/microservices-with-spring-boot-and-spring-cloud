@@ -1,13 +1,13 @@
-package com.learning.rest.serviceImpl;
+package com.user.rest.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.learning.api.convertor.UserConvertor;
-import com.learning.api.entity.User;
-import com.learning.api.service.UserApiService;
-import com.learning.rest.model.RestUser;
-import com.learning.rest.service.UserService;
+import com.user.api.entity.User;
+import com.user.api.service.UserApiService;
+import com.user.rest.convertor.UserConvertor;
+import com.user.rest.model.RestUser;
+import com.user.rest.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

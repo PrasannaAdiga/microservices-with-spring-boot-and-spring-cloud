@@ -1,4 +1,4 @@
-package com.learning.api.entity;
+package com.user.api.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

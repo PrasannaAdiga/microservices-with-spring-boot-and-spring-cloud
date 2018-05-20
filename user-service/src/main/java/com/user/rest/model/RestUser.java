@@ -1,4 +1,4 @@
-package com.learning.rest.model;
+package com.user.rest.model;
 
 import java.util.Date;
 

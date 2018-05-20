@@ -1,6 +1,6 @@
-package com.learning.api.service;
+package com.user.api.service;
 
-import com.learning.api.entity.User;
+import com.user.api.entity.User;
 
 public interface UserApiService {
 

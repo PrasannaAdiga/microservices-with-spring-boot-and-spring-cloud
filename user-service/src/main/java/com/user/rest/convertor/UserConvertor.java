@@ -1,14 +1,14 @@
-package com.learning.api.convertor;
+package com.user.rest.convertor;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
-import com.learning.api.entity.Role;
-import com.learning.api.entity.User;
-import com.learning.api.entity.UserRole;
-import com.learning.rest.model.RestUser;
+import com.user.api.entity.Role;
+import com.user.api.entity.User;
+import com.user.api.entity.UserRole;
+import com.user.rest.model.RestUser;
 
 @Component
 public class UserConvertor {
