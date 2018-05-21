@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.user.api.client.BookClient;
 import com.user.api.entity.User;
 import com.user.api.repository.UserRepository;
 import com.user.api.service.UserApiService;
@@ -18,6 +19,9 @@ public class UserApiServiceImpl implements UserApiService {
 
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+	BookClient bookClient;
 
 	@Override
 	public User createUser(User user) {
@@ -49,6 +53,11 @@ public class UserApiServiceImpl implements UserApiService {
 	@Override
 	public void deleteUserById(UUID id) {
 		userRepository.delete(id);
+	}
+
+	@Override
+	public void reserveBook(UUID userId, UUID bookId) {
+		bookClient.reserveBook(userId, bookId);
 	}
 	
 }

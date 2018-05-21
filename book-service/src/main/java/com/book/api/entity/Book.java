@@ -30,6 +30,7 @@ public class Book {
 	
 	private String language;
 	private long totalPage;
+	private UUID userId;
 	
 	/**
 	 * @return the id
@@ -114,6 +115,18 @@ public class Book {
 	 */
 	public void setTotalPage(long totalPage) {
 		this.totalPage = totalPage;
+	}
+	/**
+	 * @return the userId
+	 */
+	public UUID getUserId() {
+		return userId;
+	}
+	/**
+	 * @param userId the userId to set
+	 */
+	public void setUserId(UUID userId) {
+		this.userId = userId;
 	}
 
 }

@@ -11,5 +11,6 @@ public interface BookApiService {
 	public Iterable<Book> getAllBooks();
 	public Book updateBook(Book book);
 	public void deleteBookById(UUID id);
+	public void reserveBook(UUID userId, UUID bookId);
 	
 }

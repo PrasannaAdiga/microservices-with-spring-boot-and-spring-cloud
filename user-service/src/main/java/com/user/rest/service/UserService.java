@@ -12,4 +12,5 @@ public interface UserService {
 	public List<RestUser> getAllUsers();
 	public RestUser updateUser(RestUser restUser);
 	public void deleteUserById(UUID id);
+	public void reserveBook(UUID userId, UUID bookId);
 }

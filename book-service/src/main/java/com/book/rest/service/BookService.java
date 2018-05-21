@@ -12,5 +12,6 @@ public interface BookService {
 	public List<RestBook> getAllBooks();
 	public RestBook updateBook(RestBook restBook);
 	public void deleteBookById(UUID id);
+	public void reserveBook(UUID userId, UUID bookId);
 	
 }

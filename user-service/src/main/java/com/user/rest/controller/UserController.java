@@ -44,4 +44,9 @@ public class UserController {
 	public void deleteUserById(@PathVariable UUID id) {
 		userService.deleteUserById(id);
 	}
+	
+	@RequestMapping(value = "/{userId}/books/{bookId}", method = RequestMethod.POST)
+	public void reserveBook(@PathVariable UUID userId, @PathVariable UUID bookId) {
+		userService.reserveBook(userId, bookId);
+	}
 }

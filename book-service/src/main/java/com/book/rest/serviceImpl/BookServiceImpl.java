@@ -55,4 +55,9 @@ public class BookServiceImpl implements BookService {
 		bookApiService.deleteBookById(id);
 	}
 
+	@Override
+	public void reserveBook(UUID userId, UUID bookId) {
+		bookApiService.reserveBook(userId, bookId);
+	}
+
 }

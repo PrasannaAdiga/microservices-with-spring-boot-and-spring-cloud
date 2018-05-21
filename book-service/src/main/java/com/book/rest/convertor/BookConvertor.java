@@ -26,6 +26,7 @@ public class BookConvertor {
 		RestBook restBook = new RestBook();
 		
 		restBook.setId(book.getId());
+		restBook.setUserId(book.getUserId());
 		restBook.setName(book.getName());
 		restBook.setAuthor(book.getAuthor());
 		restBook.setLanguage(book.getLanguage());

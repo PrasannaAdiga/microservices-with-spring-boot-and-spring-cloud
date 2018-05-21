@@ -11,4 +11,5 @@ public interface UserApiService {
 	public Iterable<User> getAllUsers();
 	public User updateUser(User user);
 	public void deleteUserById(UUID id);
+	public void reserveBook(UUID userId, UUID bookId);
 }

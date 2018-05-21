@@ -54,5 +54,10 @@ public class UserServiceImpl implements UserService {
 	public void deleteUserById(UUID id) {
 		userApiService.deleteUserById(id);
 	}
+
+	@Override
+	public void reserveBook(UUID userId, UUID bookId) {
+		userApiService.reserveBook(userId, bookId);
+	}
 	
 }
